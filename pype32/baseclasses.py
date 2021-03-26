@@ -173,12 +173,12 @@ class DataTypeBaseClass(object):
         if isinstance(other, self.__class__):
             try:
                 result = self.value + other.value
-            except TypeError, e:
+            except TypeError as e:
                 raise e
         else:
             try:
                 result = self.value + other
-            except TypeError, e:
+            except TypeError as e:
                 raise e
         return result
 
@@ -187,12 +187,12 @@ class DataTypeBaseClass(object):
         if isinstance(other, self.__class__):
             try:
                 result = self.value - other.value
-            except TypeError, e:
+            except TypeError as e:
                 raise e
         else:
             try:
                 result = self.value - other
-            except TypeError, e:
+            except TypeError as e:
                 raise e
         return result
 
@@ -203,7 +203,7 @@ class DataTypeBaseClass(object):
         else:
             try:
                 result = self.value * other
-            except TypeError, e:
+            except TypeError as e:
                 raise e
         return result
 
@@ -228,7 +228,7 @@ class DataTypeBaseClass(object):
         else:
             try:
                 result = self.value ^ other
-            except TypeError, e:
+            except TypeError as e:
                 raise e
         return result
 
@@ -239,7 +239,7 @@ class DataTypeBaseClass(object):
         else:
             try:
                 result = self.value >> other
-            except TypeError, e:
+            except TypeError as e:
                 raise e
         return result
 
@@ -250,7 +250,7 @@ class DataTypeBaseClass(object):
         else:
             try:
                 result = self.value << other
-            except TypeError, e:
+            except TypeError as e:
                 raise e
         return result
 
@@ -261,7 +261,7 @@ class DataTypeBaseClass(object):
         else:
             try:
                 result = self.value & other
-            except TypeError, e:
+            except TypeError as e:
                 raise e
         return result
 
@@ -272,6 +272,6 @@ class DataTypeBaseClass(object):
         else:
             try:
                 result = self.value | other
-            except TypeError, e:
+            except TypeError as e:
                 raise e
         return result
